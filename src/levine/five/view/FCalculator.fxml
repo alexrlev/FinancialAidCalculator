@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="555.0" maxWidth="670.0" minHeight="555.0" minWidth="670.0" onMouseMoved="#fillCombos" prefHeight="555.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="levine.five.view.CalculatorController">
+   <bottom>
+      <AnchorPane maxHeight="175.0" maxWidth="734.0" minHeight="145.0" minWidth="555.0" prefHeight="175.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="calcButton" layoutX="314.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate Now!" />
+            <Label layoutX="265.0" layoutY="44.0" text="Tuition:" />
+            <TextField fx:id="calcTuition" layoutX="313.0" layoutY="40.0" onAction="#handleCalculate" prefWidth="215.0" />
+            <Label layoutX="105.0" layoutY="78.0" text="Estimated possible aid based on data:" />
+            <TextField fx:id="calcAid" layoutX="313.0" layoutY="74.0" prefWidth="215.0" />
+            <Label layoutX="229.0" layoutY="112.0" text="Total after aid:" />
+            <TextField fx:id="calcTotal" layoutX="313.0" layoutY="108.0" prefWidth="215.0" />
+            <Label layoutX="156.0" layoutY="145.0" text="Difference from desired pay:" />
+            <TextField fx:id="calcDifference" layoutX="313.0" layoutY="141.0" prefWidth="215.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane maxHeight="330.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="111.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.66665649414062" minWidth="10.0" prefWidth="120.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="95.33331298828125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="112.66668701171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.33331298828125" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.66668701171875" minWidth="10.0" prefWidth="109.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="84.33332824707031" minHeight="10.0" prefHeight="68.33332824707031" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="104.66667175292969" minHeight="10.0" prefHeight="100.66667175292969" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="111.33334350585938" minHeight="10.0" prefHeight="101.33334350585938" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="54.666656494140625" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="135.0" text="In which state do you live:" textAlignment="CENTER" wrapText="true">
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER" prefHeight="91.0" prefWidth="129.0" text="How many family members will be in your household when you start college?" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER" prefHeight="103.0" prefWidth="140.0" text="How many family members will be attending unviersity, including yourself, when you start college?" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="2.0" />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER" prefHeight="113.0" prefWidth="112.0" text="In which state is your desired university:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="121.0" text="Enter university:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="153.0" text="Enter full tuition*:" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="78.0" prefWidth="136.0" text="What is the annual income of Parent/Legal Guardian 1?" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" prefHeight="103.0" prefWidth="145.0" text="What is the annual income of Parent/Legal Guardian 2?" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER" prefHeight="85.0" prefWidth="111.0" text="How would you (the student) describe your employment status?" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="132.0" prefWidth="166.0" text="How much would you and your family like to pay?*" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="1.0" />
+                     </padding></Label>
+                  <Label alignment="TOP_LEFT" prefHeight="55.0" prefWidth="110.0" text="*Please do not include punctuation marks (e.g. $  ,  . )  or spaces in your response" textFill="#4c4b4b" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="homeState" onAction="#fillCombos" prefHeight="25.0" prefWidth="108.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <ComboBox fx:id="numberOfFamilyMembers" onAction="#fillCombos" prefWidth="108.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="familyInCollege" onAction="#fillCombos" prefWidth="108.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="collegeState" onAction="#fillCombos" prefWidth="108.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                  <ComboBox fx:id="incomeOne" prefWidth="108.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                  <ComboBox fx:id="incomeTwo" prefWidth="108.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="incomeStudent" prefWidth="108.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="enterUniversity" maxWidth="108.0" prefHeight="25.0" prefWidth="108.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="enterTuition" maxWidth="88.0" prefWidth="88.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="4.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="desiredTuition" maxWidth="88.0" prefWidth="88.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="16.0" text="\$" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="13.0" text="\$" textAlignment="RIGHT" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+               </children>
+               <padding>
+                  <Insets left="4.0" right="5.0" />
+               </padding>
+            </GridPane>
+         </center>
+         <top>
+            <Pane prefHeight="55.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="39.0" layoutY="17.0" text="Family Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="239.0" layoutY="17.0" text="University Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="466.0" layoutY="17.0" text="Financial Information">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
